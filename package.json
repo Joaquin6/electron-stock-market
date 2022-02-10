@@ -14,15 +14,16 @@
   },
   "scripts": {
     "start": "./node_modules/.bin/electron .",
-    "build": "./node_modules/.bin/browserify -t vueify -e src/app.js -o build/build.js",
-    "buildAndRun": "./node_modules/.bin/browserify -t vueify -e src/app.js -o build/build.js && npm start"
+    "build": "./node_modules/.bin/browserify -t vueify -r dotenv/config -e src/app.js -o build/build.js",
+    "buildAndRun": "./node_modules/.bin/browserify -t vueify -r dotenv/config -e src/app.js -o build/build.js && npm start"
   },
   "dependencies": {
+    "d3": "4.12.0",
+    "dotenv": "^16.0.0",
     "electron": "^1.7.8",
-    "vue": "^2.5.9",
-    "vue-resource": "^1.3.4",
     "techan": "0.8.0",
-    "d3": "4.12.0"
+    "vue": "^2.5.9",
+    "vue-resource": "^1.3.4"
   },
   "devDependencies": {
     "browserify": "^14.5.0",
